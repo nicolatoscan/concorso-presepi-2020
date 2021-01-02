@@ -1,9 +1,11 @@
 <template>
   <div class="home">
     <div v-for="(presepe, i) in presepi" :key="i" class="presepe-wrapper">
-      <Presepe v-model="ratings[presepe.name]" :name="presepe.name" :images="presepe.photos" class="presepe" />
+      <Presepe v-model="ratings[presepe.code]" :name="presepe.name" :images="presepe.photos" class="presepe" />
     </div>
-    <button @click="sendResults()">Invia i voti</button>
+    <button @click="sendResults()" :disabled="!submitBtnInfo().enabled">
+      {{submitBtnInfo().text}}
+    </button>
   </div>
 </template>
 
@@ -12,10 +14,11 @@ import { defineComponent } from "vue";
 import presepi from "@/assets/presepi.json";
 import { PresepeInfo } from "@/models/presepe-info";
 import Presepe from "@/components/Presepe.vue";
+import axios from 'axios';
 
 const ratings: { [id: string]: (number | null)} = {}
 for (const p of presepi) {
-  ratings[p.name] = null;
+  ratings[p.code] = null;
 }
 
 export default defineComponent({
@@ -23,7 +26,9 @@ export default defineComponent({
   data: function () {
     return {
       presepi: [] as PresepeInfo[],
-      ratings: ratings
+      ratings: ratings,
+      sending: false,
+      sent: false
     };
   },
   components: {
@@ -31,10 +36,34 @@ export default defineComponent({
   },
   created: function () {
     this.$data.presepi = presepi;
+    if (localStorage.getItem('ratings'))
+      this.sent = true
   },
   methods: {
-    sendResults: function() {
+    sendResults: async function() {
       console.log(this.ratings);
+      this.sending = true
+      try {
+        const response = await axios.post(process.env.VUE_APP_API_HOST + 'save', this.ratings)
+        localStorage.setItem('ratings', JSON.stringify(this.ratings))
+        this.sent = true
+      } catch (error) {
+        alert(`C'è stato un errore nell'invio di dati. Codice errore: ${error.response.data}`);
+        this.sending = false
+      }
+    },
+    submitBtnInfo: function(): { enabled: boolean; text: string } {
+      if (this.sending)
+        return { enabled: false, text: 'Inviando i voti...' }
+      if (this.sent)
+        return { enabled: false, text: 'I tuoi voti sono stati salvati' }
+
+      for (const k in this.ratings) {
+        if (typeof ratings[k] !== 'number') {
+          return { enabled: false, text: 'Vota tutti i presepi per inviare i voti' }
+        }
+      }
+      return { enabled: true, text: 'Invia i tuoi voti' }
     }
   }
 });
@@ -72,6 +101,9 @@ html {
     transition: 0.2s ease-in background-color;
     &:active {
       background-color: #FF2222;
+    }
+    &:disabled {
+      background-color: #888;
     }
   }
 }

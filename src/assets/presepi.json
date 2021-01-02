@@ -1,12 +1,14 @@
 [{
     "name": "Presepe di pippo e pluto",
+    "code": "P1",
     "photos": [
         "Presepe_A0.jpg",
         "Presepe_A1.jpg",
         "Presepe_A2.jpg"
     ]
-},{
+    },{
     "name": "Presepe di pippo e pluto 2",
+    "code": "P2",
     "photos": [
         "Presepe_A0.jpg",
         "Presepe_A1.jpg",
