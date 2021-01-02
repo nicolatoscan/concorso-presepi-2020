@@ -73,7 +73,12 @@ export default defineComponent({
     scrollToPosition: function (pos: number) {
       if (pos < 0)
         pos = this.$data.imgElements.length + pos
-      this.$data.imgElements[pos % this.$data.imgElements.length].scrollIntoView({ behavior: "smooth" })
+      const el = this.$data.imgElements[pos % this.$data.imgElements.length] as HTMLElement
+      (this.$refs["slider"] as Element).scrollTo({
+        left: el.offsetLeft,
+        behavior: 'smooth'
+      })
+      // el.scrollIntoView({ behavior: "smooth" })
     }
   }
 });
