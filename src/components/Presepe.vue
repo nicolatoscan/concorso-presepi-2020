@@ -2,7 +2,7 @@
   <div class="presepe">
     <h2>{{name}}</h2>
     <ImageSlider :images="images" />
-    <StarRating :value="modelValue"  @input="$emit('update:modelValue', $event)"/>
+    <StarRating :modelValue="modelValue"  @update:modelValue="$emit('update:modelValue', $event)"/>
   </div>
 </template>
 
@@ -22,10 +22,10 @@ export default defineComponent({
     images: {
       type: Array,
       default: () => [
-        'https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg',
-        'https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg',
-        'https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg',
-        'https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg',
+        'https://picsum.photos/800/600?1',
+        'https://picsum.photos/800/600?2',
+        'https://picsum.photos/600/800?3',
+        'https://picsum.photos/800/600?4'
       ]
     },
     modelValue: Number
@@ -34,5 +34,11 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+.presepe {
+  margin: 2em auto;
+  background: radial-gradient(ellipse at bottom, #FF2222 0%, #992222 100%);
+  border-radius: 10px;
+  padding: 1em;
 
+}
 </style>

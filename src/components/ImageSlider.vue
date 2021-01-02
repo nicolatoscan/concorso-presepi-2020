@@ -1,7 +1,9 @@
 <template>
 <div class="slider-wrapper">
   <div class="slider" ref="slider">
-    <img :ref="setImgRefs" v-for="img in images" :key="img" :src="img" />
+    <div class="img-container" v-for="img in images" :key="img" :ref="setImgRefs" :data-src="img">
+      <img :src="img" />
+    </div>
   </div>
   <div class="controls-bottom">
     <div
@@ -45,7 +47,7 @@ export default defineComponent({
           return entry.intersectionRatio > max.intersectionRatio ? entry : max;
         });
         if (activated.intersectionRatio > 0) {
-          setCurrentPosition(activated.target.getAttribute("src") ?? '');
+          setCurrentPosition(activated.target.getAttribute("data-src") ?? '');
         }
       },
       {
@@ -97,9 +99,20 @@ export default defineComponent({
       display: none;
     }
 
+    .img-container {
+      min-width: 100%;
+      scroll-snap-align: center;
+      border-radius: 15px;
+      display: flex;
+      align-self: center;
+      align-content: center;
+      justify-content: center;
+    }
+
     img {
-      width: 100%;
-      scroll-snap-align: start;
+      max-height: 50vh;
+      max-width: 100%;
+      align-self: center;
     }
   }
 
@@ -112,7 +125,8 @@ export default defineComponent({
     align-items: center;
     color: white;
     font-size: em;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
     cursor: pointer;
     &.controls-arrow-left {
       left: 0;
@@ -121,7 +135,7 @@ export default defineComponent({
       right: 0;
     }
     &:hover {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.2);
     }
     .controls-arrow {
       width: 50%;
