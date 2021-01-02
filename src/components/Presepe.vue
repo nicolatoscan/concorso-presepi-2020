@@ -34,6 +34,7 @@ export default defineComponent({
   background: radial-gradient(ellipse at bottom, #FF2222 0%, #992222 100%);
   border-radius: 10px;
   padding: 1em;
+  border: 1px solid #DDA700;
 
   h2 {
     color: white;

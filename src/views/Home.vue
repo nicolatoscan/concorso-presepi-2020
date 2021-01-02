@@ -3,6 +3,7 @@
     <div v-for="(presepe, i) in presepi" :key="i" class="presepe-wrapper">
       <Presepe v-model="ratings[presepe.name]" :name="presepe.name" :images="presepe.photos" class="presepe" />
     </div>
+    <button @click="sendResults()">Invia i voti</button>
   </div>
 </template>
 
@@ -30,11 +31,12 @@ export default defineComponent({
   },
   created: function () {
     this.$data.presepi = presepi;
-    setInterval(() => {
-      console.log(this.ratings);
-      
-    }, 2000)
   },
+  methods: {
+    sendResults: function() {
+      console.log(this.ratings);
+    }
+  }
 });
 </script>
 
@@ -56,6 +58,20 @@ html {
     .presepe {
       width: 80vw;
       max-width: 960px;
+    }
+  }
+
+  button {
+    padding: 0.3em 1em;
+    margin: 1em;
+    margin-bottom: 5em;
+    font-size: 2em;
+    color: white;
+    background-color: #992222;
+    cursor: pointer;
+    transition: 0.2s ease-in background-color;
+    &:active {
+      background-color: #FF2222;
     }
   }
 }
