@@ -1,4 +1,5 @@
 <template>
+  <button class="reset-btn" @click="clearLocalStorage()">RESET</button>
   <router-view/>
   <Snow />
 </template>
@@ -11,6 +12,12 @@ export default defineComponent({
   name: "App",
   components: {
     Snow
+  },
+  methods: {
+    clearLocalStorage: function() {
+      localStorage.removeItem('ratings')
+      location.reload()
+    }
   }
 });
 </script>
@@ -25,6 +32,9 @@ export default defineComponent({
 
 body {
   margin: 0;
+}
+.reset-btn {
+  position: fixed;
 }
 
 </style>
