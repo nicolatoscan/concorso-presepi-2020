@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <div v-for="(n, i) in Array(3)" :key="i" class="presepe-wrapper">
-      <Presepe v-model="rat" :name="'Presepe 1'" class="presepe" />
+    <div v-for="(presepe, i) in presepi" :key="i" class="presepe-wrapper">
+      <Presepe v-model="ratings[presepe.name]" :name="presepe.name" :images="presepe.photos" class="presepe" />
     </div>
   </div>
 </template>
@@ -12,12 +12,17 @@ import presepi from "@/assets/presepi.json";
 import { PresepeInfo } from "@/models/presepe-info";
 import Presepe from "@/components/Presepe.vue";
 
+const ratings: { [id: string]: (number | null)} = {}
+for (const p of presepi) {
+  ratings[p.name] = null;
+}
+
 export default defineComponent({
   name: "Home",
   data: function () {
     return {
       presepi: [] as PresepeInfo[],
-      rat: 3
+      ratings: ratings
     };
   },
   components: {
@@ -25,6 +30,10 @@ export default defineComponent({
   },
   created: function () {
     this.$data.presepi = presepi;
+    setInterval(() => {
+      console.log(this.ratings);
+      
+    }, 2000)
   },
 });
 </script>

@@ -1,6 +1,15 @@
 [{
-    "name": "test1",
+    "name": "Presepe di pippo e pluto",
     "photos": [
-        "assets/presepi/1/0.JPG"
+        "Presepe_A0.jpg",
+        "Presepe_A1.jpg",
+        "Presepe_A2.jpg"
+    ]
+},{
+    "name": "Presepe di pippo e pluto 2",
+    "photos": [
+        "Presepe_A0.jpg",
+        "Presepe_A1.jpg",
+        "Presepe_A2.jpg"
     ]
 }]

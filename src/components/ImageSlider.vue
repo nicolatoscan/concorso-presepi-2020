@@ -2,7 +2,7 @@
 <div class="slider-wrapper">
   <div class="slider" ref="slider">
     <div class="img-container" v-for="img in images" :key="img" :ref="setImgRefs" :data-src="img">
-      <img :src="img" />
+      <img :src="getImage(img)" />
     </div>
   </div>
   <div class="controls-bottom">
@@ -81,6 +81,10 @@ export default defineComponent({
         behavior: 'smooth'
       })
       // el.scrollIntoView({ behavior: "smooth" })
+    },
+    getImage: function(file: string) {
+      const images = require.context('../assets/', false, /\.jpg$/)
+      return images('./' + file)
     }
   }
 });
@@ -157,6 +161,7 @@ export default defineComponent({
       border-radius: 50%;
       display: inline-block;
       background-color: #888;
+      cursor: pointer;
       &.current {
         background-color: black;
       }

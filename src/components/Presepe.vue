@@ -21,12 +21,7 @@ export default defineComponent({
     name: String,
     images: {
       type: Array,
-      default: () => [
-        'https://picsum.photos/800/600?1',
-        'https://picsum.photos/800/600?2',
-        'https://picsum.photos/600/800?3',
-        'https://picsum.photos/800/600?4'
-      ]
+      default: () => []
     },
     modelValue: Number
   }
@@ -40,5 +35,8 @@ export default defineComponent({
   border-radius: 10px;
   padding: 1em;
 
+  h2 {
+    color: white;
+  }
 }
 </style>
