@@ -1,14 +1,19 @@
 <template>
-  <div class="slider carousel" ref="slider">
-    <img class="ciao" :ref="setImgRefs" v-for="img in images" :key="img" :src="img" />
+<div class="slider-wrapper">
+  <div class="slider" ref="slider">
+    <img :ref="setImgRefs" v-for="img in images" :key="img" :src="img" />
   </div>
-  <div>
-    <span
+  <div class="controls-bottom">
+    <div
+      class="control-ball"
       v-for="(n, i) in Array(images.length)"
       :key="i"
       :class="i == currentPosition ? 'current' : ''"
-      @click="scrollToPosition(i)">{{i}} - </span>
+      @click="scrollToPosition(i)"></div>
   </div>
+  <div class="controls-arrow controls-arrow-left" @click="scrollToPosition(currentPosition - 1)"><span>&larr;</span></div>
+  <div class="controls-arrow controls-arrow-right" @click="scrollToPosition(currentPosition + 1)"><span>&rarr;</span></div>
+</div>
 </template>
 
 <script lang="ts">
@@ -38,7 +43,7 @@ export default defineComponent({
         this.currentPosition = i
       console.log(this.currentPosition)
     }
-    this.observer = new IntersectionObserver(function (entries, observer) {
+    this.observer = new IntersectionObserver(function (entries) {
         const activated = entries.reduce(function (max, entry) {
           return entry.intersectionRatio > max.intersectionRatio ? entry : max;
         });
@@ -69,6 +74,8 @@ export default defineComponent({
       }
     },
     scrollToPosition: function (pos: number) {
+      if (pos < 0)
+        pos = this.$data.imgElements.length + pos
       this.$data.imgElements[pos % this.$data.imgElements.length].scrollIntoView({ behavior: "smooth" })
     }
   }
@@ -76,16 +83,68 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.slider {
-  display: flex;
-  flex-direction: row;
+.slider-wrapper {
+  position: relative;
   width: 90vw;
-  overflow: auto;
-  scroll-snap-type: x mandatory;
+  .slider {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
-  img {
-    width: 90vw;
-    scroll-snap-align: start;
+    img {
+      width: 90vw;
+      scroll-snap-align: start;
+    }
+  }
+
+  .controls-arrow {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: em;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    &.controls-arrow-left {
+      left: 0;
+    }
+    &.controls-arrow-right {
+      right: 0;
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .controls-arrow {
+      width: 50%;
+    }
+    span {
+      padding: 1em;
+    }
+  }
+  
+
+  .controls-bottom {
+    position: absolute;
+    bottom: 0.1em;
+    width: 100%;
+    .control-ball {
+      width: 0.5em;
+      height: 0.5em;
+      margin: 0.3em;
+      border-radius: 50%;
+      display: inline-block;
+      background-color: #888;
+      &.current {
+        background-color: black;
+      }
+    }
   }
 }
 
