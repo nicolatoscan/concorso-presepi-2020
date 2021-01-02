@@ -1,18 +1,28 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    Ciao
+    <ImageSlider />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import { defineComponent } from "vue";
+import presepi from "@/assets/presepi.json";
+import { PresepeInfo } from "@/models/presepe-info";
+import ImageSlider from "@/components/ImageSlider.vue";
 
 export default defineComponent({
-  name: 'Home',
+  name: "Home",
+  data: function () {
+    return {
+      presepi: [] as PresepeInfo[],
+    };
+  },
   components: {
-    HelloWorld,
+    ImageSlider,
+  },
+  created: function () {
+    this.$data.presepi = presepi;
   },
 });
 </script>
