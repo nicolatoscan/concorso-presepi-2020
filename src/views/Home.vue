@@ -1,7 +1,12 @@
 <template>
   <div class="home">
     <div v-for="(presepe, i) in presepi" :key="i" class="presepe-wrapper">
-      <Presepe v-model="ratings[presepe.code]" :name="presepe.name" :images="presepe.photos" class="presepe" :enabled="!sent" />
+      <Presepe v-model="ratings[presepe.code]"
+        :name="presepe.name"
+        :description="presepe.description"
+        :images="presepe.photos"
+        class="presepe"
+        :enabled="!sent" />
     </div>
     <button @click="sendResults()" :disabled="!submitBtnInfo().enabled">
       {{submitBtnInfo().text}}

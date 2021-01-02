@@ -1,6 +1,7 @@
 <template>
   <div class="presepe">
-    <h2>{{name}}</h2>
+    <h3>{{name}}</h3>
+    <p class="description" v-if="description">{{description}}</p>
     <ImageSlider :images="images" />
     <StarRating :modelValue="modelValue"  @update:modelValue="$emit('update:modelValue', $event)" :enabled="enabled" />
   </div>
@@ -19,6 +20,7 @@ export default defineComponent({
   },
   props: {
     name: String,
+    description: String,
     images: {
       type: Array,
       default: () => []
@@ -37,8 +39,10 @@ export default defineComponent({
   padding: 1em;
   border: 1px solid #DDA700;
 
-  h2 {
+  h3, .description {
     color: white;
+    padding: 0 1em;
   }
+
 }
 </style>
