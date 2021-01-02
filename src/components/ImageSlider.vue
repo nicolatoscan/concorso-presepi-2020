@@ -21,27 +21,24 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "ImageSlider",
+  props: {
+    images: {
+      type: Array,
+      default: () => []
+    }
+  },
   data() {
     return {
-      images: [
-        "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-        "https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg",
-      ],
       imgElements: [] as HTMLElement[],
       currentPosition: 0,
       observer: null as IntersectionObserver | null
     };
   },
   mounted: function () {
-    console.log(this.imgElements.length)
-
     const setCurrentPosition = (url: string) => {
-      const i = this.images.indexOf(url)
+      const i = this.$props.images?.indexOf(url) ?? -1
       if (i >= 0)
         this.currentPosition = i
-      console.log(this.currentPosition)
     }
     this.observer = new IntersectionObserver(function (entries) {
         const activated = entries.reduce(function (max, entry) {
@@ -85,7 +82,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .slider-wrapper {
   position: relative;
-  width: 90vw;
+  width: 100%;
   .slider {
     display: flex;
     flex-direction: row;
@@ -96,7 +93,7 @@ export default defineComponent({
     }
 
     img {
-      width: 90vw;
+      width: 100%;
       scroll-snap-align: start;
     }
   }

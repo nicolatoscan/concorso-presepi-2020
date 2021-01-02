@@ -1,8 +1,6 @@
 <template>
-  <div class="home">
-    Ciao
-    <ImageSlider />
-    <StarRating v-model="rat" />
+  <div class="home">    
+    <Presepe />
   </div>
 </template>
 
@@ -10,8 +8,7 @@
 import { defineComponent } from "vue";
 import presepi from "@/assets/presepi.json";
 import { PresepeInfo } from "@/models/presepe-info";
-import ImageSlider from "@/components/ImageSlider.vue";
-import StarRating from "@/components/StarRating.vue";
+import Presepe from "@/components/Presepe.vue";
 
 export default defineComponent({
   name: "Home",
@@ -22,7 +19,7 @@ export default defineComponent({
     };
   },
   components: {
-    ImageSlider, StarRating
+    Presepe
   },
   created: function () {
     this.$data.presepi = presepi;
