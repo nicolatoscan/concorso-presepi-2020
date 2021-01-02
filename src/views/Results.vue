@@ -2,11 +2,13 @@
   <div class="result-table-wrapper box">
     <table>
       <tr>
+        <th>N°</th>
         <th>Nome</th>
         <th>Media Voti</th>
         <th>Numero voti</th>
       </tr>
-      <tr v-for="v in votes" :key="v.name">
+      <tr v-for="(v, i) in votes" :key="v.name">
+        <td class="cell-number">{{i + 1}}</td>
         <td>{{v.name}}</td>
         <td class="cell-number">{{v.avg}}</td>
         <td class="cell-number">{{v.n}}</td>
