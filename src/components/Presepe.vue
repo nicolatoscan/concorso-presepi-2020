@@ -2,7 +2,7 @@
   <div class="presepe">
     <h2>{{name}}</h2>
     <ImageSlider :images="images" />
-    <StarRating :modelValue="modelValue"  @update:modelValue="$emit('update:modelValue', $event)"/>
+    <StarRating :modelValue="modelValue"  @update:modelValue="$emit('update:modelValue', $event)" :enabled="enabled" />
   </div>
 </template>
 
@@ -23,7 +23,8 @@ export default defineComponent({
       type: Array,
       default: () => []
     },
-    modelValue: Number
+    modelValue: Number,
+    enabled: Boolean
   }
 });
 </script>

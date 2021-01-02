@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div v-for="(presepe, i) in presepi" :key="i" class="presepe-wrapper">
-      <Presepe v-model="ratings[presepe.code]" :name="presepe.name" :images="presepe.photos" class="presepe" />
+      <Presepe v-model="ratings[presepe.code]" :name="presepe.name" :images="presepe.photos" class="presepe" :enabled="!sent" />
     </div>
     <button @click="sendResults()" :disabled="!submitBtnInfo().enabled">
       {{submitBtnInfo().text}}
@@ -36,8 +36,14 @@ export default defineComponent({
   },
   created: function () {
     this.$data.presepi = presepi;
-    if (localStorage.getItem('ratings'))
+    const oldRatings = localStorage.getItem('ratings')
+    if (oldRatings) {
       this.sent = true
+      const parsedOldRatings = JSON.parse(oldRatings)
+      for (const k in parsedOldRatings) {
+        this.ratings[k] = parsedOldRatings[k]
+      }
+    }
   },
   methods: {
     sendResults: async function() {
@@ -46,11 +52,11 @@ export default defineComponent({
       try {
         const response = await axios.post(process.env.VUE_APP_API_HOST + 'save', this.ratings)
         localStorage.setItem('ratings', JSON.stringify(this.ratings))
-        this.sent = true
       } catch (error) {
         alert(`C'è stato un errore nell'invio di dati. Codice errore: ${error.response.data}`);
-        this.sending = false
       }
+      this.sending = false
+      this.sent = true
     },
     submitBtnInfo: function(): { enabled: boolean; text: string } {
       if (this.sending)

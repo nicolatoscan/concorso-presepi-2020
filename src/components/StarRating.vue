@@ -16,14 +16,17 @@ export default defineComponent({
   name: 'StarRating',
   props: {
     modelValue: Number,
+    enabled: Boolean,
   },
   methods: {
     setRating: function(r: number) {
-      if (r < 1)
-        r = 1
-      if (r > 5)
-        r = 5
-      this.$emit('update:modelValue', r);
+      if (this.$props.enabled) {
+          if (r < 1)
+          r = 1
+        if (r > 5)
+          r = 5
+        this.$emit('update:modelValue', r);
+      }
     }
   }
 });
