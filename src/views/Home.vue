@@ -43,6 +43,10 @@ export default defineComponent({
       for (const k in parsedOldRatings) {
         this.ratings[k] = parsedOldRatings[k]
       }
+    } else {
+      window.onbeforeunload = function() {
+        return 'Non hai ancora inviato i risultati, sei sicuro di voler chiudere la pagina?';
+      };
     }
   },
   methods: {
@@ -52,6 +56,7 @@ export default defineComponent({
       try {
         const response = await axios.post(process.env.VUE_APP_API_HOST + 'save', this.ratings)
         localStorage.setItem('ratings', JSON.stringify(this.ratings))
+        window.onbeforeunload = () => undefined;
       } catch (error) {
         alert(`C'è stato un errore nell'invio di dati. Codice errore: ${error.response.data}`);
       }
