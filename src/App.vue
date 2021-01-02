@@ -37,4 +37,9 @@ body {
   position: fixed;
 }
 
+.box {
+  background: radial-gradient(ellipse at bottom, #FF2222 0%, #992222 100%);
+  border: 1px solid #DDA700;
+}
+
 </style>

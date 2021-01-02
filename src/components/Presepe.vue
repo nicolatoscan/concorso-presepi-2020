@@ -1,5 +1,5 @@
 <template>
-  <div class="presepe">
+  <div class="presepe box">
     <h3>{{name}}</h3>
     <p class="description" v-if="description">{{description}}</p>
     <ImageSlider :images="images" />
@@ -34,10 +34,8 @@ export default defineComponent({
 <style scoped lang="scss">
 .presepe {
   margin: 2em auto;
-  background: radial-gradient(ellipse at bottom, #FF2222 0%, #992222 100%);
   border-radius: 10px;
   padding: 1em;
-  border: 1px solid #DDA700;
 
   h3, .description {
     color: white;

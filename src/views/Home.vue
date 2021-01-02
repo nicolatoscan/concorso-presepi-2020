@@ -59,7 +59,7 @@ export default defineComponent({
       console.log(this.ratings);
       this.sending = true
       try {
-        const response = await axios.post(process.env.VUE_APP_API_HOST + 'save', this.ratings)
+        await axios.post(process.env.VUE_APP_API_HOST + 'save', this.ratings)
         localStorage.setItem('ratings', JSON.stringify(this.ratings))
         window.onbeforeunload = () => undefined;
       } catch (error) {
