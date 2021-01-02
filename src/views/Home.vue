@@ -1,6 +1,8 @@
 <template>
   <div class="home">    
-    <Presepe />
+    <Presepe :name="'Presepe 1'" />
+    <Presepe :name="'Presepe 2'" />
+    <Presepe :name="'Presepe 3'" />
   </div>
 </template>
 

@@ -1,6 +1,19 @@
 <template>
   <router-view/>
+  <Snow />
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import Snow from "@/components/Snow.vue";
+
+export default defineComponent({
+  name: "App",
+  components: {
+    Snow
+  }
+});
+</script>
 
 <style lang="scss">
 #app {
@@ -8,7 +21,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+}
+
+body {
+  margin: 0;
 }
 
 </style>
