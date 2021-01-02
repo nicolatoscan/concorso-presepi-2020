@@ -1,17 +1,116 @@
-[{
-    "name": "Presepe di pippo e pluto",
-    "code": "P1",
-    "photos": [
-        "Presepe_A0.jpg",
-        "Presepe_A1.jpg",
-        "Presepe_A2.jpg"
-    ]
-    },{
-    "name": "Presepe di pippo e pluto 2",
-    "code": "P2",
-    "photos": [
-        "Presepe_A0.jpg",
-        "Presepe_A1.jpg",
-        "Presepe_A2.jpg"
-    ]
-}]
+[
+    {
+        "name": "Presepe realizzato da Braido Pietro e nonna Silvia",
+        "code": "P01",
+        "photos": [
+            "P01A.jpg",
+            "P01B.jpg",
+            "P01C.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da De Nardi Maria Nicole",
+        "code": "P02",
+        "photos": [
+            "P02A.jpg",
+            "P02B.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Andreatta Giovanni e Maria Vittoria",
+        "code": "P03",
+        "photos": [
+            "P03A.jpg",
+            "P03B.jpg",
+            "P03C.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Brion Francesca, Macello e Luca",
+        "code": "P04",
+        "photos": [
+            "P04A.jpg",
+            "P04B.jpg",
+            "P04C.jpg",
+            "P04D.jpg",
+            "P04E.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Rover Maurizio e famiglia",
+        "code": "P05",
+        "photos": [
+            "P05A.jpg",
+            "P05B.jpg",
+            "P05C.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Prevedello Irene e Noemi",
+        "code": "P06",
+        "photos": [
+            "P06A.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Piva Arianna e Giulia",
+        "code": "P07",
+        "photos": [
+            "P07A.jpg",
+            "P07B.jpg",
+            "P07C.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Maddalena Andreatta",
+        "code": "P08",
+        "photos": [
+            "P08A.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Beghi Kieser Catarina",
+        "code": "P09",
+        "photos": [
+            "P09A.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Dal Moro Nicola",
+        "code": "P10",
+        "photos": [
+            "P10A.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Dana Agata e nonna Edda",
+        "code": "P11",
+        "photos": [
+            "P11A.jpg",
+            "P11B.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Prevedello Danilo",
+        "code": "P12",
+        "photos": [
+            "P12A.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da famiglia Seminati Andrea, Lidia, Maddalena, Clara e Serena",
+        "code": "P13",
+        "photos": [
+            "P13A.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da famiglia Bastianon Enzo, Laura, Katia e Luca",
+        "code": "P14",
+        "photos": [
+            "P14A.jpg",
+            "P14B.jpg",
+            "P14C.jpg"
+        ]
+    }
+]
