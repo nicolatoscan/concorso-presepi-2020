@@ -79,6 +79,9 @@ export default defineComponent({
   methods: {
     sendResults: async function() {
       console.log(this.ratings);
+      if (!this.submitBtnInfo().enabled) {
+        return;
+      }
       this.sending = true
       try {
         await axios.post(process.env.VUE_APP_API_HOST + 'save', this.ratings)
