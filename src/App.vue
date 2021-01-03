@@ -1,5 +1,4 @@
 <template>
-  <button class="reset-btn" @click="clearLocalStorage()">RESET</button>
   <router-view/>
   <Snow />
 </template>
