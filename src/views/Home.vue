@@ -130,7 +130,6 @@ header {
   .presepe-wrapper {
     // scroll-snap-align: start;
     min-height: 80vh;
-    max-height: 100vh;
     display: flex;
     align-items: center;
 

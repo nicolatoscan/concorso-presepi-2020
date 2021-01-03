@@ -36,15 +36,19 @@ export default defineComponent({
 <style scoped lang="scss">
 
 .star-wrapper {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 
   .star {
-    display: inline-block;
     padding: 0.3em;
     font-size: 3em;
     color: #999;
     cursor: pointer;
     transition: 0.2s ease-in color;
+    font-size: 10vw;
+    @media screen and (min-width: 600px) {
+      font-size: 4em;
+    }
     &.active {
       color: #FFD700;
     }
