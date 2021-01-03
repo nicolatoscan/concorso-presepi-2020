@@ -163,5 +163,22 @@
         "photos": [
             "P20A.jpg"
         ]
+    },
+    {
+        "name": "Presepe realizzato da Ziliotto Olivia e Virginia",
+        "code": "P21",
+        "photos": [
+            "P21A.jpg",
+            "P21B.jpg",
+            "P21C.jpg",
+            "P21D.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Margherita Carlin",
+        "code": "P22",
+        "photos": [
+            "P22A.jpg"
+        ]
     }
 ]
