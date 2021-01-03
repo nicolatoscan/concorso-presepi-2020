@@ -2,6 +2,21 @@
   <div class="home">
     <header class="box">
       <h1>Concorso presepi 2020</h1>
+      <div class="introduction-text">
+        <p>Carissimi Parrocchiani,<br>
+            siamo tutti invitati a votare questi bellissimi presepi per il nostro “concorso presepi 2020”.<br>
+            Non è una gara, quanto un modo per sentirci ancora più vicini e di condivisione in un momento come questo. Non esistono presepi belli o brutti. Ognuno è originale e speciale.
+            In ogni presepe vediamo e gustiamo la tenerezza di Dio che si fa bambino e viene nella nostra vita in umiltà e semplicità.
+            Ringraziamo tutte le persone che hanno partecipato per la condivisione.
+        </p>
+        <p><b>Alcune regolette per la votazione:</b></p>
+        <ol>
+          <li>Perché il sondaggio vada a buon fine è necessario votare TUTTI i presepi;</li>
+          <li>Sotto ogni presepe ci saranno 5 stelline – dovrete votare con le corrispondenti stelle ogni presepe da 1 a 5;</li>
+          <li>Alla fine del sondaggio verrà sommato il conteggio totale di ogni presepe e saranno poi premiati i primi 3 vincitori mercoledì 6 gennaio dopo la Santa Messa delle ore 11.00 nella nostra chiesa Parrocchiale, dove verranno proiettati i nostri presepi alla comunità.</li>
+        </ol>
+        <p>Grazie anche a chi parteciperà a questa votazione!!</p>
+      </div>
     </header>
     <div v-for="(presepe, i) in presepi" :key="i" class="presepe-wrapper">
       <Presepe v-model="ratings[presepe.code]"
@@ -92,12 +107,28 @@ export default defineComponent({
 html {
   scroll-snap-type: y mandatory;
 }
+
+header {
+  width: 80vw;
+  max-width: 960px;
+  padding: 1em;
+  margin: 1em auto 0;
+  border-radius: 10px;
+
+  .introduction-text {
+    text-align: left;
+    padding: 1em;
+    li {
+      margin: 7px 0;
+    }
+  }
+}
 .home {
-    scroll-snap-type: y mandatory;
-    scroll-snap-align: start;
+  // scroll-snap-type: y mandatory;
+  // scroll-snap-align: start;
 
   .presepe-wrapper {
-    scroll-snap-align: start;
+    // scroll-snap-align: start;
     min-height: 80vh;
     max-height: 100vh;
     display: flex;
