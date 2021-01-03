@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <header class="box">
+      <h1>Concorso presepi 2020</h1>
+    </header>
     <div v-for="(presepe, i) in presepi" :key="i" class="presepe-wrapper">
       <Presepe v-model="ratings[presepe.code]"
         :name="presepe.name"
