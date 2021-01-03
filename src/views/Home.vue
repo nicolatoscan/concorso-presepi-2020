@@ -73,6 +73,9 @@ export default defineComponent({
       };
     }
   },
+  unmounted: function() {
+    window.onbeforeunload = () => undefined;
+  },
   methods: {
     sendResults: async function() {
       console.log(this.ratings);

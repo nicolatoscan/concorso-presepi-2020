@@ -69,6 +69,10 @@ export default defineComponent({
   beforeUpdate() {
     this.imgElements = []
   },
+  unmounted() {
+    if (this.interval)
+      clearInterval(this.interval)
+  },
   methods: {
     setImgRefs(el: HTMLElement) {
       if (el) {
