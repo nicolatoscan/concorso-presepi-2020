@@ -156,5 +156,12 @@
             "P19C.jpg",
             "P19D.jpg"
         ]
+    },
+    {
+        "name": "Presepe realizzato da Zancanaro Andrea Lupo",
+        "code": "P19",
+        "photos": [
+            "P20A.jpg"
+        ]
     }
 ]

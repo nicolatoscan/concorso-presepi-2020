@@ -5,7 +5,7 @@
       <img :src="getImage(img)" />
     </div>
   </div>
-  <div class="controls-bottom">
+  <div v-if="images.length > 1" class="controls-bottom">
     <div
       class="control-ball"
       v-for="(n, i) in Array(images.length)"
@@ -13,8 +13,8 @@
       :class="i == currentPosition ? 'current' : ''"
       @click="scrollToPosition(i, true)"></div>
   </div>
-  <div class="controls-arrow controls-arrow-left" @click="scrollToPosition(currentPosition - 1, true)"><span>&larr;</span></div>
-  <div class="controls-arrow controls-arrow-right" @click="scrollToPosition(currentPosition + 1, true)"><span>&rarr;</span></div>
+  <div v-if="images.length > 1" class="controls-arrow controls-arrow-left" @click="scrollToPosition(currentPosition - 1, true)"><span>&larr;</span></div>
+  <div v-if="images.length > 1" class="controls-arrow controls-arrow-right" @click="scrollToPosition(currentPosition + 1, true)"><span>&rarr;</span></div>
 </div>
 </template>
 
