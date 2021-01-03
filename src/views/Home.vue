@@ -15,6 +15,7 @@
           <li>Sotto ogni presepe ci saranno 5 stelline – dovrete votare con le corrispondenti stelle ogni presepe da 1 a 5;</li>
           <li>Alla fine del sondaggio verrà sommato il conteggio totale di ogni presepe e saranno poi premiati i primi 3 vincitori mercoledì 6 gennaio dopo la Santa Messa delle ore 11.00 nella nostra chiesa Parrocchiale, dove verranno proiettati i nostri presepi alla comunità.</li>
         </ol>
+        <p>Attenzione che per quanto riguarda alcuni presepi ci sono più di una foto! Usa le frecce per vederle tutte.</p>
         <p>Grazie anche a chi parteciperà a questa votazione!!</p>
       </div>
     </header>
