@@ -115,5 +115,46 @@
             "P14B.jpg",
             "P14C.jpg"
         ]
+    },
+    {
+        "name": "Presepe realizzato da Vilma Andreatta e Gildo Torresan",
+        "code": "P15",
+        "photos": [
+            "P15A.jpg",
+            "P15B.jpg",
+            "P15C.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Elia Pegoraro e Nonna",
+        "description": "È un piccolo presepe in una cestsa che rappresenta l'universo dove al centro c'è Gusù!",
+        "code": "P16",
+        "photos": [
+            "P16A.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Bavaresco Paolo e Alessandra",
+        "code": "P17",
+        "photos": [
+            "P17A.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Andrea Scarpa",
+        "code": "P18",
+        "photos": [
+            "P18A.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Dissegna Chiara",
+        "code": "P19",
+        "photos": [
+            "P19A.jpg",
+            "P19B.jpg",
+            "P19C.jpg",
+            "P19D.jpg"
+        ]
     }
 ]
