@@ -11,10 +11,10 @@
       v-for="(n, i) in Array(images.length)"
       :key="i"
       :class="i == currentPosition ? 'current' : ''"
-      @click="scrollToPosition(i)"></div>
+      @click="scrollToPosition(i, true)"></div>
   </div>
-  <div class="controls-arrow controls-arrow-left" @click="scrollToPosition(currentPosition - 1)"><span>&larr;</span></div>
-  <div class="controls-arrow controls-arrow-right" @click="scrollToPosition(currentPosition + 1)"><span>&rarr;</span></div>
+  <div class="controls-arrow controls-arrow-left" @click="scrollToPosition(currentPosition - 1, true)"><span>&larr;</span></div>
+  <div class="controls-arrow controls-arrow-right" @click="scrollToPosition(currentPosition + 1, true)"><span>&rarr;</span></div>
 </div>
 </template>
 
@@ -33,7 +33,8 @@ export default defineComponent({
     return {
       imgElements: [] as HTMLElement[],
       currentPosition: 0,
-      observer: null as IntersectionObserver | null
+      observer: null as IntersectionObserver | null,
+      interval: null as number | null
     };
   },
   mounted: function () {
@@ -60,6 +61,10 @@ export default defineComponent({
       this.observer.observe(this.imgElements[i]);
     }
 
+    this.interval = setInterval(() => {
+      this.scrollToPosition(this.currentPosition + 1)
+    }, 5000)
+
   },
   beforeUpdate() {
     this.imgElements = []
@@ -72,7 +77,7 @@ export default defineComponent({
           this.observer.observe(el)
       }
     },
-    scrollToPosition: function (pos: number) {
+    scrollToPosition: function (pos: number, stopInterval = false) {
       if (pos < 0)
         pos = this.$data.imgElements.length + pos
       const el = this.$data.imgElements[pos % this.$data.imgElements.length] as HTMLElement
@@ -80,6 +85,9 @@ export default defineComponent({
         left: el.offsetLeft,
         behavior: 'smooth'
       })
+      if (stopInterval && this.interval !== null) {
+        clearInterval(this.interval)
+      }
       // el.scrollIntoView({ behavior: "smooth" })
     },
     getImage: function(file: string) {
@@ -129,17 +137,14 @@ export default defineComponent({
     align-items: center;
     color: white;
     font-size: em;
-    background-color: rgba(0, 0, 0, 0);
     border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
     &.controls-arrow-left {
       left: 0;
     }
     &.controls-arrow-right {
       right: 0;
-    }
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.2);
     }
     .controls-arrow {
       width: 50%;
