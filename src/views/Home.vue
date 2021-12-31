@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <header class="box">
-      <h1>Concorso presepi 2020</h1>
+      <h1>Concorso presepi 2021</h1>
       <div class="introduction-text">
         <p>Carissimi Parrocchiani,<br>
-            siamo tutti invitati a votare questi bellissimi presepi per il nostro “concorso presepi 2020”.<br>
+            siamo tutti invitati a votare questi bellissimi presepi per il nostro “concorso presepi 2021”.<br>
             Non è una gara, quanto un modo per sentirci ancora più vicini e di condivisione in un momento come questo. Non esistono presepi belli o brutti. Ognuno è originale e speciale.
             In ogni presepe vediamo e gustiamo la tenerezza di Dio che si fa bambino e viene nella nostra vita in umiltà e semplicità.
             Ringraziamo tutte le persone che hanno partecipato per la condivisione.

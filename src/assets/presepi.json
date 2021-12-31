@@ -1,6 +1,6 @@
 [
     {
-        "name": "Presepe realizzato da Braido Pietro e nonna Silvia",
+        "name": "Presepe realizzato da Mattia e Irene Manganello",
         "code": "P01",
         "photos": [
             "P01A.jpg",
@@ -9,176 +9,52 @@
         ]
     },
     {
-        "name": "Presepe realizzato da De Nardi Maria Nicole",
+        "name": "Presepe realizzato da Giuliana Bonsembiante",
         "code": "P02",
         "photos": [
-            "P02A.jpg",
-            "P02B.jpg"
+            "P02A.jpg"
         ]
     },
     {
-        "name": "Presepe realizzato da Andreatta Giovanni e Maria Vittoria",
-        "description": "Posa una base di corteccia e circondata da rami di pino. La capanna è stata creata con un tronco di una pianta svuotato per accogliere la sacra famiglia e Gesù Bambino. Le statuine sono quelle di papà quando era piccolo",
+        "name": "Presepe realizzato da Andreatta Maddalena",
         "code": "P03",
         "photos": [
-            "P03A.jpg",
-            "P03B.jpg",
-            "P03C.jpg"
+            "P03A.jpg"
         ]
     },
     {
-        "name": "Presepe realizzato da Brion Francesca, Marcello e Luca",
+        "name": "Presepe realizzato da Rino, Gino, Giacinto e Bepi",
         "code": "P04",
         "photos": [
-            "P04A.jpg",
-            "P04B.jpg",
-            "P04C.jpg",
-            "P04D.jpg",
-            "P04E.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da Rover Maurizio e famiglia",
-        "code": "P05",
-        "photos": [
-            "P05A.jpg",
-            "P05B.jpg",
-            "P05C.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da Prevedello Irene e Noemi",
-        "code": "P06",
-        "photos": [
-            "P06A.jpg"
+            "P04A.jpg"
         ]
     },
     {
         "name": "Presepe realizzato da Piva Arianna e Giulia",
+        "code": "P06",
+        "photos": [
+            "P06A.jpg",
+            "P06B.jpg",
+            "P06C.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Sveva e Linda Eremo",
         "code": "P07",
         "photos": [
             "P07A.jpg",
-            "P07B.jpg",
-            "P07C.jpg"
+            "P07B.jpg"
         ]
     },
     {
-        "name": "Presepe realizzato da Maddalena Andreatta",
+        "name": "Presepe realizzato da Antonio, Agnese, Agata e Anna Torresan",
         "code": "P08",
         "photos": [
-            "P08A.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da Beghi Kieser Catarina",
-        "code": "P09",
-        "photos": [
-            "P09A.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da Dal Moro Nicola",
-        "code": "P10",
-        "photos": [
-            "P10A.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da Dana Agata e nonna Edda",
-        "code": "P11",
-        "photos": [
-            "P11A.jpg",
-            "P11B.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da Prevedello Danilo",
-        "code": "P12",
-        "photos": [
-            "P12A.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da famiglia Seminati Andrea, Lidia, Maddalena, Clara e Serena",
-        "description": "Il nostro presepe, quest'anno vuole  rappresentare alcuni aspetti di questo Natale 2020. A differenza degli  altri anni, quest'anno è stato fatto all'interno della abitazione proprio per sentirlo più vicino a noi, e stare con noi in un luogo dove purtroppo in questo periodo abbiamo vissuto di più.  La semplicità dei personaggi presenti, raffigurano la famiglia ristretta di questi tempi, ma a cui siamo fortemente legati, cioè le persone più importanti.  Sono tutti riuniti davanti ad una luce che splende e riscalda nel comfort della loro \"casacapanna\". Family Seminati",
-        "code": "P13",
-        "photos": [
-            "P13A.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da famiglia Bastianon Enzo",
-        "description": "Il presepio non vuole rappresentare nulla di particolare, vuole però essere segno di una tradizione e cultura cristiana. Non importa se grande o piccolo, bello o meno bello ma il presepe dovrebbe essere presente in ogni casa durante il periodo natalizio, più dell’albero stesso.",
-        "code": "P14",
-        "photos": [
-            "P14A.jpg",
-            "P14B.jpg",
-            "P14C.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da Vilma Andreatta e Gildo Torresan",
-        "code": "P15",
-        "photos": [
-            "P15A.jpg",
-            "P15B.jpg",
-            "P15C.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da Elia Pegoraro e Nonna",
-        "description": "È un piccolo presepe in una cestsa che rappresenta l'universo dove al centro c'è Gusù!",
-        "code": "P16",
-        "photos": [
-            "P16A.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da Bavaresco Paolo e Alessandra",
-        "code": "P17",
-        "photos": [
-            "P17A.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da Andrea Scarpa",
-        "code": "P18",
-        "photos": [
-            "P18A.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da Pellizzari Azzurra, Achille e nonna Chiara",
-        "code": "P19",
-        "photos": [
-            "P19A.jpg",
-            "P19B.jpg",
-            "P19C.jpg",
-            "P19D.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da Zancanaro Andrea Lupo",
-        "code": "P20",
-        "photos": [
-            "P20A.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da Ziliotto Olivia e Virginia",
-        "code": "P21",
-        "photos": [
-            "P21A.jpg",
-            "P21B.jpg",
-            "P21C.jpg",
-            "P21D.jpg"
-        ]
-    },
-    {
-        "name": "Presepe realizzato da Margherita Carlin",
-        "code": "P22",
-        "photos": [
-            "P22A.jpg"
+            "P08A.jpg",
+            "P08B.jpg",
+            "P08C.jpg",
+            "P08D.jpg",
+            "P08E.jpg"
         ]
     }
 ]
