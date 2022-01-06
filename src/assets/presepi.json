@@ -30,6 +30,14 @@
         ]
     },
     {
+        "name": "Presepe realizzato da Tonello Caterina",
+        "code": "P05",
+        "photos": [
+            "P05A.mp4"
+        ],
+        "isvideo": true
+    },
+    {
         "name": "Presepe realizzato da Piva Arianna e Giulia",
         "code": "P06",
         "photos": [
@@ -56,5 +64,51 @@
             "P08D.jpg",
             "P08E.jpg"
         ]
+    },
+    {
+        "name": "Presepe realizzato da Brion Francesca, Marcello e Luca",
+        "code": "P09",
+        "photos": [
+            "P09A.jpg",
+            "P09B.jpg",
+            "P09C.jpg",
+            "P09D.jpg",
+            "P09E.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Ziliotto Olivia e Virginia",
+        "code": "P10",
+        "photos": [
+            "P10A.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Braido Pietro",
+        "code": "P11",
+        "photos": [
+            "P11A.jpg",
+            "P11B.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Dal bello Nicola, Ilaria e Giulia",
+        "code": "P12",
+        "photos": [
+            "P12A.jpg",
+            "P12B.jpg",
+            "P12C.jpg",
+            "P12D.jpg"
+        ]
+    },
+    {
+        "name": "Presepe realizzato da Giovanni Alberto e Maria Vittoria Andreatta",
+        "code": "P13",
+        "photos": [
+            "P13A.jpg",
+            "P13B.jpg",
+            "P13C.jpg"
+        ]
     }
+
 ]

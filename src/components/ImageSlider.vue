@@ -2,7 +2,8 @@
 <div class="slider-wrapper">
   <div class="slider" ref="slider">
     <div class="img-container" v-for="img in images" :key="img" :ref="setImgRefs" :data-src="img">
-      <img :src="getImage(img)" />
+      <img :src="getImage(img)" v-if="!isvideo" />
+      <video :src="getVideo(img)" v-else type="video/mp4" controls ref="videoRef" muted/>
     </div>
   </div>
   <div v-if="images.length > 1" class="controls-bottom">
@@ -19,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   name: "ImageSlider",
@@ -27,6 +28,13 @@ export default defineComponent({
     images: {
       type: Array,
       default: () => []
+    },
+    isvideo: Boolean
+  },
+  setup() {
+    const videoRef = ref(null);
+    return {
+      videoRef
     }
   },
   data() {
@@ -65,6 +73,10 @@ export default defineComponent({
       this.scrollToPosition(this.currentPosition + 1)
     }, 5000)
 
+    setTimeout(() => {
+      if (this.videoRef)
+        (this.videoRef as any).play()
+    }, 1000)
   },
   beforeUpdate() {
     this.imgElements = []
@@ -96,6 +108,10 @@ export default defineComponent({
     },
     getImage: function(file: string) {
       const images = require.context('../assets/', false, /\.jpg$/)
+      return images('./' + file)
+    },
+    getVideo: function(file: string) {
+      const images = require.context('../assets/', false, /\.mp4$/)
       return images('./' + file)
     }
   }

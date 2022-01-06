@@ -24,6 +24,7 @@
         :name="presepe.name"
         :description="presepe.description"
         :images="presepe.photos"
+        :isvideo="presepe.isvideo ?? false"
         class="presepe"
         :enabled="!sent" />
     </div>
@@ -78,7 +79,6 @@ export default defineComponent({
   },
   methods: {
     sendResults: async function() {
-      console.log(this.ratings);
       if (!this.submitBtnInfo().enabled) {
         return;
       }

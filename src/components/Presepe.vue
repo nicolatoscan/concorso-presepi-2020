@@ -2,7 +2,7 @@
   <div class="presepe box">
     <h3>{{name}}</h3>
     <p class="description" v-if="description">{{description}}</p>
-    <ImageSlider :images="images" />
+    <ImageSlider :images="images" :isvideo="isvideo" />
     <StarRating :modelValue="modelValue"  @update:modelValue="$emit('update:modelValue', $event)" :enabled="enabled" />
   </div>
 </template>
@@ -25,6 +25,7 @@ export default defineComponent({
       type: Array,
       default: () => []
     },
+    isvideo: Boolean,
     modelValue: Number,
     enabled: Boolean
   }
