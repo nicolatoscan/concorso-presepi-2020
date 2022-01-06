@@ -3,7 +3,7 @@
   <div class="slider" ref="slider">
     <div class="img-container" v-for="img in images" :key="img" :ref="setImgRefs" :data-src="img">
       <img :src="getImage(img)" v-if="!isvideo" />
-      <video :src="getVideo(img)" v-else type="video/mp4" controls ref="videoRef" muted/>
+      <video :src="getVideo(img)" v-else type="video/mp4" controls ref="videoRef" muted loop/>
     </div>
   </div>
   <div v-if="images.length > 1" class="controls-bottom">
