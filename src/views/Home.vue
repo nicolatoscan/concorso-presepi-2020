@@ -61,7 +61,7 @@ export default defineComponent({
   },
   created: function () {
     this.$data.presepi = presepi;
-    const oldRatings = localStorage.getItem('ratings2')
+    const oldRatings = localStorage.getItem('ratings2021')
     if (oldRatings) {
       this.sent = true
       const parsedOldRatings = JSON.parse(oldRatings)
@@ -85,7 +85,7 @@ export default defineComponent({
       this.sending = true
       try {
         await axios.post(process.env.VUE_APP_API_HOST + 'save', this.ratings)
-        localStorage.setItem('ratings2', JSON.stringify(this.ratings))
+        localStorage.setItem('ratings2021', JSON.stringify(this.ratings))
         window.onbeforeunload = () => undefined;
       } catch (error) {
         alert(`C'è stato un errore nell'invio di dati. Codice errore: ${error.response.data}`);
