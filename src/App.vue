@@ -14,7 +14,7 @@ export default defineComponent({
   },
   methods: {
     clearLocalStorage: function() {
-      localStorage.removeItem('ratings2021')
+      localStorage.removeItem('ratings2021a')
       location.reload()
     }
   }
