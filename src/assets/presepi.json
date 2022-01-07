@@ -52,7 +52,8 @@
         "photos": [
             "P07A.jpg",
             "P07B.jpg"
-        ]
+        ],
+        "description": "“Questo è il nostro presepe realizzato con pannelli di legno e schiuma espansa”"
     },
     {
         "name": "Presepe realizzato da Antonio, Agnese, Agata e Anna Torresan",
@@ -108,7 +109,19 @@
             "P13A.jpg",
             "P13B.jpg",
             "P13C.jpg"
-        ]
+        ],
+        "description": "Presepe creato su una fetta di tronco a sua volta posta su un ceppo di un albero. La grotta in legno che accoglie la Sacra Famiglia e lo steccato tutto intorno a proteggere il presepe tutto, sono ispirati al nostro presepe in Chiesa e in particolare lo steccato anche a quello di casa nostra ai Bassi. Sopra il presepe vi è un Angelo sospeso che rende Gloria a Gesù Bambino."
+    },
+    {
+        "name": "Presepe realizzato da Dana Fiumicetti",
+        "code": "P13",
+        "photos": [
+            "P14A.jpg",
+            "P14B.jpg",
+            "P14C.jpg",
+            "P14D.jpg"
+        ],
+        "description": "Due presepi fatti Dana con materiali di riciclo trovati a casa nel bosco: casetta per gli uccelli, mollette per la biancheria, gusci di noci, tappi, sassi, carta e colori; con Gesù nero."
     }
 
 ]
