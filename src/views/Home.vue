@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <header class="box">
-      <h1>Concorso presepi 2021</h1>
+      <h1>Concorso presepi Natale 2021</h1>
       <div class="introduction-text">
         <p>Carissimi Parrocchiani,<br>
             siamo tutti invitati a votare questi bellissimi presepi per il nostro “concorso presepi 2021”.<br>
