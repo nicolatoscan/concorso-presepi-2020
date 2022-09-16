@@ -1,5 +1,7 @@
 # concorso-presepi-2020
 
+WebApp to vote for the best presepe of the village
+
 ## Project setup
 ```
 npm install
